@@ -62,13 +62,15 @@ window.SITE_CONFIG = {
 
   /*
    * PLANILHA DO GOOGLE (conteúdo atualizável)
-   * Cole aqui o link "Publicar na web → CSV" de cada aba.
+   * Cole aqui o link de cada aba (o link normal da planilha, com o #gid= da aba,
+   * compartilhada como "Qualquer pessoa com o link: Leitor"), ou o link
+   * "Publicar na web → CSV".
    * Se ficar vazio (ou a planilha falhar), o site usa os arquivos
    * de reserva em /data/*.csv que estão no repositório.
    */
   planilha: {
-    tratamentosCSV: "",
-    agendaCSV: ""
+    tratamentosCSV: "https://docs.google.com/spreadsheets/d/1D2ujV7AfmaKenH4gKLS96obyCnmaqTwGF45_4-Ge6xA/edit#gid=0",
+    agendaCSV: "https://docs.google.com/spreadsheets/d/1D2ujV7AfmaKenH4gKLS96obyCnmaqTwGF45_4-Ge6xA/edit#gid=1"
   },
 
   siteUrl: "https://maxhomsi.github.io/Espaco_maisvoce/"

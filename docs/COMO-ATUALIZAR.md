@@ -84,13 +84,11 @@ Telefone, horários, endereço, Instagram e textos das páginas ficam no arquivo
 
 ---
 
-## Para o Max: primeira configuração da planilha
+## Para o Max: como a planilha está ligada ao site
 
-1. Crie uma planilha no Google Sheets com duas abas: `tratamentos` e `agenda`.
-2. Importe `data/tratamentos.csv` na aba `tratamentos` e `data/agenda.csv` na aba `agenda` (Arquivo → Importar → Upload → “Substituir página atual”).
-3. **Arquivo → Compartilhar → Publicar na web** → escolha a aba `tratamentos` e o formato **CSV** → Publicar. Copie o link.
-4. Repita para a aba `agenda`.
-5. Cole os dois links em `assets/js/config.js`, em `planilha.tratamentosCSV` e `planilha.agendaCSV`. Commit e push.
-6. Compartilhe a planilha com a cliente como **Editora**.
-
-(Também funciona colar o link normal da planilha, desde que ela esteja compartilhada como “qualquer pessoa com o link pode ver”.)
+- Planilha: https://docs.google.com/spreadsheets/d/1D2ujV7AfmaKenH4gKLS96obyCnmaqTwGF45_4-Ge6xA/edit
+- Compartilhada como **Qualquer pessoa com o link: Leitor** — é isso que permite o site ler. Não tire esse acesso.
+- Em `assets/js/config.js`, `planilha.tratamentosCSV` aponta para a aba `tratamentos` (`#gid=0`) e `planilha.agendaCSV` para a aba `agenda` (`#gid=1`). Se criar uma aba nova, o número do `gid` aparece no fim do endereço quando você clica nela.
+- As colunas `duracao`, `preco` e toda a aba `agenda` estão formatadas como texto, para o Google não transformar "10/09" em data.
+- Para passar para a cliente: Compartilhar → adicionar o e-mail dela como Editora → depois, nos três pontinhos ao lado do nome dela, **Transferir propriedade**. O link continua o mesmo, então o site não muda.
+- Alternativa: Arquivo → Compartilhar → Publicar na web → CSV, e colar esse link no `config.js` (também funciona).
